@@ -516,6 +516,10 @@ else()
 	endif()
 endif()
 
+if(DEFINED TFM_PSA_TEST_CRYPTO_CUSTOM_PAL_CFG)
+	add_definitions(-DTFM_PSA_TEST_CRYPTO_CUSTOM_PAL_CFG="${TFM_PSA_TEST_CRYPTO_CUSTOM_PAL_CFG}")
+endif()
+
 message(STATUS "[PSA] : ----------Process input arguments- complete-------------")
 
 
