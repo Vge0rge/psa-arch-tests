@@ -18,7 +18,12 @@
 #ifndef _PAL_CONFIG_H_
 #define _PAL_CONFIG_H_
 
+#ifdef TFM_PSA_TEST_CRYPTO_CUSTOM_PAL_CFG
+#include TFM_PSA_TEST_CRYPTO_CUSTOM_PAL_CFG
+#else
 #include "pal_crypto_config.h"
+#endif
+
 #include "pal_attestation_config.h"
 #include "pal_storage_config.h"
 
